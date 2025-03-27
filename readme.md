@@ -33,9 +33,8 @@ cargo run
 ```
 Si tout fonctionne, vous devriez voir ce message :
 ```
-🚀 Serveur en cours d'exécution sur http://127.0.0.1:3000
+🚀 Serveur en cours d'exécution sur http://127.0.0.1:3001
 ```
-Accédez ensuite à `http://127.0.0.1:3000/` pour voir `Hello, Axum! 🚀`.
 
 ---
 
