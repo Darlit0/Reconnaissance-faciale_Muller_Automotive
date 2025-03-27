@@ -2,7 +2,7 @@
 
 Bienvenue dans le dépôt du projet de système de reconnaissance faciale développé pour **Muller Automotive**.
 
-![Logo de Muller Automotive]([chemin/vers/le/logo.jpg[(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5CNpRMeTOAMD8URQSQXBd3oFfRjy2knSTNA&s)](https://media.licdn.com/dms/image/v2/D4E0BAQHzLTCZWbfncA/company-logo_200_200/company-logo_200_200/0/1718700886650/muller_automotive_sas_logo?e=2147483647&v=beta&t=6HdLM5UjIzNZYzDlhS9mD5RGz40yLHnm2xyzTv3R_2E))
+[![Logo de Muller Automotive](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5CNpRMeTOAMD8URQSQXBd3oFfRjy2knSTNA&s)](https://www.mullerautomotive.fr/)
 
 ## Présentation du Projet
 
@@ -30,8 +30,4 @@ Veuillez consulter les README respectifs dans chaque dossier pour des instructio
 ## Ressources Supplémentaires
 
 Pour plus d'informations sur **Muller Automotive** et ses produits, veuillez visiter le site officiel : [Muller Automotive](https://www.mullerautomotive.fr/)
-
----
-
-**Note** : Assurez-vous de remplacer `chemin/vers/le/logo.jpg` par le chemin réel du logo de **Muller Automotive** dans le dépôt.
 
