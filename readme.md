@@ -1,4 +1,47 @@
+# Installation de Rust et Axum 🚀
 
+Ce guide explique comment installer Rust et Axum pour développer une API web avec ce framework.
+
+## 1️⃣ Installer Rust 🦀
+Rust s'installe avec `rustup`, l'outil officiel de gestion des versions de Rust.
+
+### 🔹 Sous Linux et macOS
+Ouvrez un terminal et exécutez :
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+Ensuite, ajoutez Rust à votre `PATH` :
+```sh
+source $HOME/.cargo/env
+```
+
+### 🔹 Sous Windows
+Téléchargez et exécutez le programme d'installation depuis [https://rustup.rs](https://rustup.rs).
+
+Vérifiez ensuite l'installation avec :
+```sh
+rustc --version
+```
+
+---
+
+
+## 4️⃣ Lancer le serveur 🚀
+Compilez et exécutez votre serveur avec :
+```sh
+cargo run
+```
+Si tout fonctionne, vous devriez voir ce message :
+```
+🚀 Serveur en cours d'exécution sur http://127.0.0.1:3000
+```
+Accédez ensuite à `http://127.0.0.1:3000/` pour voir `Hello, Axum! 🚀`.
+
+---
+
+Votre serveur Axum est prêt ! 🎉🔥
+
+---
 
 
 
