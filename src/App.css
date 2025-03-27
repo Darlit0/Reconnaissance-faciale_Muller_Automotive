@@ -1,0 +1,261 @@
+#root {
+  flex: 1;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body {
+  place-items: unset;
+  flex: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+header {
+  background-color: #CD121D;
+  flex: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+}
+
+.sidebar {
+  flex: 50%;
+  height: calc(100vh - 4.663em);
+  overflow-y: auto;
+  scrollbar-color: #D9D9D9 #FFE3E3;
+
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  flex: 50%;
+  padding: 20px;
+  width: auto;
+  /*width: calc(100% - 250px); /* Prend tout l'espace restant */
+  overflow-y: auto;
+}
+
+.squircle {
+  border-radius: 12px;
+  border: 2px solid;
+  border-color: #CD121D;
+  background-color: #f0f0f0;
+}
+
+.search {
+  border-radius: 1000px;
+  display: flex;
+  height: 70%;
+  min-width: 40%;
+  max-width: 70%;
+  justify-content: center;
+  background-color: #FFD6D8;
+  color: black;
+}
+
+/*.inputfield {
+  height: 70%;
+  min-height: 40%;
+  max-width: 30%;
+}*/
+
+.connection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1000px;
+  background-color: #CD121D;
+}
+
+.login-container {
+  border-radius: 1000px;
+}
+
+.login-container p {
+  color: black;
+}
+
+/* Existing base styles remain unchanged */
+
+/* Edit page specific styles */
+.main-content.full-width {
+  width: 100%;
+  padding: 10px;
+  max-width: 100%;
+  overflow-y: auto;
+  text-align: left; /* Override the center alignment from #root */
+}
+
+.admin-edit-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.admin-edit-section {
+  width: 100%;
+  max-width: 800px;
+}
+
+.admin-edit-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #CD121D; /* Match your header color */
+}
+
+.admin-edit-section .form-group {
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.admin-edit-section label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.admin-edit-section input,
+.admin-edit-section select {
+  width: 100%;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Match your squircle style */
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+
+.btn-primary {
+  background-color: #CD121D; /* Match your header color */
+  color: white;
+  border: none;
+
+}
+
+.btn-secondary {
+  background-color: white; /* Match your search color */
+  border: 1px solid #CD121D;
+  color: black;
+}
+
+.btn-cancel{
+  padding: 8px 18px;
+  font-size: 15px;
+  border-radius: 50%; /* Match your rounded button style */
+  height: 40px;
+  cursor: pointer;
+}
+
+.btn-action{
+  width: 40px; /* Largeur et hauteur égales pour un cercle */
+  height: 40px;
+  padding: 0; /* Supprime le padding interne */
+  font-size: 20px; /* Taille de l'icône ou du texte */
+  border-radius: 50%; /* Rend le bouton circulaire */
+  display: flex; /* Centre le contenu */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.image-upload-container {
+  margin-top: 5px;
+  border: 1px dashed #ccc;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.image-preview {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.image-preview img {
+  border-radius: 12px; /* Match your squircle style */
+  border: 2px solid #CD121D;
+}
+
+.image-help {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.red-btn {
+  border-radius: 1000px;
+  background-color: #CD121D;
+}
+
+.btn-edit {
+  border-radius: 1000px;
+  background-color: #CD121D;
+}
+
+.btn-delete {
+  border-radius: 1000px;
+  background-color: #CD121D;
+}
+
+.btn-images {
+  border-radius: 1000px;
+  background-color: #CD121D;
+}
+
+.btn-logout {
+  border-radius: 1000px;
+  border-width: 1px;
+  background-color: #CD121D;
+  border-color: black;
+  
+}
+
+.btn-reco {
+  border-radius: 1000px;
+  border-width: 1px;
+  background-color: rgba(255, 0, 0, 0.759);
+  border-color: black;
+  color: black;
+  
+}
