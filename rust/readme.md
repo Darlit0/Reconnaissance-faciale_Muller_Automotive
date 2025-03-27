@@ -102,7 +102,7 @@ sudo apt install python3 -y
 sudo apt install python3-pip -y
 pip3 --version
 python3 -m venv ./mon_env
-source ../../mon_env/bin/activate
+source ./mon_env/bin/activate
 
 ```  
 
