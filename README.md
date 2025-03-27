@@ -1,6 +1,6 @@
-# 🚗✨ Système de Reconnaissance Faciale pour Muller Automotive ✨🚗
+# 🚗✨ Système de Reconnaissance Faciale ✨🚗
 
-Bienvenue dans le dépôt du projet de **système de reconnaissance faciale** développé pour **Muller Automotive**.
+Bienvenue dans le dépôt du projet de **système de reconnaissance faciale** développé dans le cadre d'un projet scolaire.
 
 <p align="center">
   <a href="https://www.mullerautomotive.fr/">
@@ -12,11 +12,9 @@ Bienvenue dans le dépôt du projet de **système de reconnaissance faciale** d�
 
 ## 🌟 Présentation du Projet
 
-🚘 **Muller Automotive** innove avec un **système de reconnaissance faciale embarqué** destiné à renforcer la **sécurité** et améliorer l'**expérience utilisateur**.
+Ce projet consiste en un **système de reconnaissance faciale** permettant l'authentification des utilisateurs. Il inclut également un **CRUD** administrateur permettant la gestion des utilisateurs et des accès.
 
-🔐 **Authentification sans clé** pour un accès plus fluide et sécurisé.
-
-⚡ **Technologie biométrique avancée** intégrée directement dans les véhicules.
+L'objectif est de mettre en place une architecture modulaire et performante intégrant plusieurs technologies modernes.
 
 ---
 
@@ -36,11 +34,11 @@ Le système repose sur une architecture robuste et performante :
 
 ## 📂 Structure du Dépôt
 
-🗂️ `sql/` - Dump de la base de données + README d'installation de PostgreSQL.
+🗂️ [`sql/`](./sql/) - Dump de la base de données + README d'installation de PostgreSQL.
 
-🗂️ `react/` - Code source du frontend avec instructions détaillées.
+🗂️ [`react/`](./react/) - Code source du frontend avec instructions détaillées.
 
-🗂️ `rust/` - Code source du backend avec documentation intégrée.
+🗂️ [`rust/`](./rust/) - Code source du backend avec documentation intégrée.
 
 ---
 
@@ -50,4 +48,15 @@ Le système repose sur une architecture robuste et performante :
 
 ---
 
+## 🔗 Ressources Supplémentaires
+
+📢 **Découvrez Muller Automotive** et ses innovations : [Muller Automotive](https://www.mullerautomotive.fr/)
+
+💻 **Documentation des technologies utilisées** :
+- [React.js](https://react.dev/)
+- [Rust & Axum](https://docs.rs/axum/latest/axum/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Python](https://www.python.org/)
+
+🚀 **Projet académique mettant en œuvre des technologies modernes !**
 
