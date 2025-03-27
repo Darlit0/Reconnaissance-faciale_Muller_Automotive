@@ -33,6 +33,14 @@ pub async fn login_handler(
             break; // On ne prend que la première image
         }
     }
+
+    let seuil = match state.seuil.read() {
+        Ok(seuil_value) => *seuil_value,
+        Err(_) => {
+            eprintln!("Impossible de lire la valeur du seuil, utilisation de la valeur par défaut 0.6");
+            0.6 // Valeur par défaut si la lecture échoue
+        }
+    };
     
     if image_data.is_empty() {
         return Err((StatusCode::BAD_REQUEST, "Aucune image fournie".to_string()));
@@ -103,10 +111,9 @@ pub async fn login_handler(
             eprintln!("Erreur lors du chargement du module Python: {}", e);
             panic!("Échec du chargement du module Python");
         });
-        
         // Appeler la fonction compare_image et extraire l'index
         match module.getattr("compare_image")
-            .and_then(|func| func.call1((uploaded_image, images_list)))
+            .and_then(|func| func.call1((uploaded_image, images_list, seuil)))
         {
             Ok(res) => {
                 match res.extract::<Option<usize>>() {

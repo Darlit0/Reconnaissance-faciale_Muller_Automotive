@@ -18,6 +18,7 @@ pub struct AppState {
     db_client: Client,
     is_admin: Arc<RwLock<bool>>,
     is_connected: Arc<RwLock<bool>>,
+    seuil: RwLock<f64>,
 }
 
 
@@ -40,10 +41,12 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Initialisation des variables globales
     let is_admin = Arc::new(RwLock::new(false));
     let is_connected = Arc::new(RwLock::new(false));
+    let seuil = RwLock::new(0.6);
     let shared_state = Arc::new(AppState {
         db_client: client,
         is_admin: is_admin.clone(),
         is_connected: is_connected.clone(),
+        seuil: seuil,
     });
 
     

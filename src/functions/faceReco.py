@@ -21,8 +21,8 @@ def vectorisation(img):
         return vect
 
 
-def compare_image(uploaded_bytes, images_bytes_list):
-
+def compare_image(uploaded_bytes, images_bytes_list, seuil):
+    print(seuil)
     try:
         pil_image = Image.open(io.BytesIO(uploaded_bytes))
         uploaded_img = cv2.cvtColor(np.array(pil_image), cv2.COLOR_RGB2BGR)
@@ -33,7 +33,7 @@ def compare_image(uploaded_bytes, images_bytes_list):
             print("Aucun visage détecté dans l'image téléchargée")
             return None
 
-        similarity_threshold = 0.8
+        similarity_threshold = seuil
         best_match_index = None
         best_similarity = 0
         
@@ -48,13 +48,11 @@ def compare_image(uploaded_bytes, images_bytes_list):
                     print(f"Aucun visage détecté dans l'image à l'index {i}")
                     continue
                 
-                # Calculer la norme euclidienne entre les vecteurs
                 distance = np.linalg.norm(uploaded_vector[0] - db_vector[0])
                 similarity = 1 - distance
                 
                 print(f"Image index {i}: Similarité {similarity * 100:.2f}%")
-                
-                # Stocker la meilleure correspondance
+
                 if similarity > best_similarity:
                     best_similarity = similarity
                     best_match_index = i
@@ -62,8 +60,7 @@ def compare_image(uploaded_bytes, images_bytes_list):
             except Exception as e:
                 print(f"Erreur lors de la comparaison avec l'image index {i}: {str(e)}")
                 continue
-        
-        # Retourner l'index de la meilleure correspondance si au-dessus du seuil
+
         if best_match_index is not None and best_similarity > similarity_threshold:
             print(f"Meilleure correspondance: Image index {best_match_index} avec {best_similarity * 100:.2f}%")
             return best_match_index

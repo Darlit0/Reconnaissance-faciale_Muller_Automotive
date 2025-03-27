@@ -22,6 +22,7 @@ pub struct ApiResponse {
     message: String,
 }
 
+
 // Check if user is admin, return a Result containing the state or an error response
 async fn check_admin(state: &Arc<AppState>) -> Result<(), (StatusCode, Json<ApiResponse>)> {
     // Check the admin flag
@@ -74,6 +75,7 @@ pub fn admin_routes() -> Router<Arc<AppState>> {
         .route("/upload-images/{id}", post(upload_images))
         .route("/images/{id}", get(get_user_images))
         .route("/last-user", get(get_last_created_user))
+        .route("/changeSeuil", post(change_seuil))
 }
 
 
@@ -531,4 +533,35 @@ async fn upload_images(
             }
         }
     }
+}
+
+// Struture pour la requête de changement de seuil
+#[derive(Deserialize)]
+pub struct SeuilRequest {
+    pub seuil: f64,
+}
+
+// Fonction pour changer le seuil
+async fn change_seuil(
+    State(state): State<Arc<AppState>>,
+    Json(request): Json<SeuilRequest>,
+) -> Result<Json<ApiResponse>, impl IntoResponse> {
+    // Vérifier si l'utilisateur est administrateur
+    if let Err(response) = check_admin(&state).await {
+        return Err(response);
+    }
+
+
+    {
+        let mut seuil_value = state.seuil.write().unwrap_or_else(|_| {
+            panic!("Erreur lors de l'accès à la variable seuil")
+        });
+        *seuil_value = request.seuil /100.0;
+    }
+
+    // Renvoyer une réponse de succès
+    Ok(Json(ApiResponse {
+        success: true,
+        message: format!("Seuil mis à jour à {}", request.seuil),
+    }))
 }
