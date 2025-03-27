@@ -101,7 +101,9 @@ sudo apt install python3 -y
 ```sh
 sudo apt install python3-pip -y
 pip3 --version
-python3 -m venv ~/mon_env
+python3 -m venv ./mon_env
+source ../../mon_env/bin/activate
+
 ```  
 
 ### 3️⃣ Installation des dépendances  
