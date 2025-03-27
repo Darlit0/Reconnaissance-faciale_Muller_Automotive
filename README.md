@@ -31,7 +31,7 @@ psql --version
 
 ---
 
-## 🔄 3. Restauration de la base de données
+## 🔄 3. Installation de la base de données
 
 ### 🚀 3.1 Démarrer PostgreSQL
 Sous Linux et macOS :
