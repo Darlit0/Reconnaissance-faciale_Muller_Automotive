@@ -4,7 +4,7 @@ Bienvenue dans le dépôt du projet de **système de reconnaissance faciale** d�
 
 <p align="center">
   <a href="https://www.mullerautomotive.fr/">
-    <img src="[https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5CNpRMeTOAMD8URQSQXBd3oFfRjy2knSTNA&s" alt="Logo de Muller Automotive](https://www.mullerautomotive.fr/wp-content/uploads/2023/02/logo-Muller-automotive-full.png)" width="250"/>
+    <img src="https://www.mullerautomotive.fr/wp-content/uploads/2023/02/logo-Muller-automotive-full.png" width="250"/>
   </a>
 </p>
 
